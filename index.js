@@ -9,9 +9,12 @@ var utils = require('./lib/utils')
 
 var Base = THREE.BufferGeometry
 
-module.exports = function createTextGeometry (opt) {
-  return new TextGeometry(opt)
-}
+module.exports = {
+  createTextGeometry: function (opt) {
+    return new TextGeometry(opt)
+  },
+  TextGeometry: TextGeometry
+};
 
 function TextGeometry (opt) {
   Base.call(this)
