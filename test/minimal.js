@@ -3,8 +3,10 @@ var index = require('../')
 var glslify = require('glslify')
 var loadFont = require('load-bmfont')
 var SDFShader = require('../shaders/sdf')
+var parseASCII = require('parse-bmfont-ascii')
 
 module.exports = {
+  parseASCII: parseASCII,
   createTextGeo: function (opt) {
       return index.createTextGeometry(opt)
   },
